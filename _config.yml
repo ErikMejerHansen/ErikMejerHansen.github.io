@@ -1,0 +1,14 @@
+# Site settings
+title: Caffeinated fumblings
+email: erik@mejer-hansen.dk
+description: > # this means to ignore newlines until "baseurl:"
+  Stray thoughts from Erik Mejer Hansen. Mostly on subjects relating to programming and being a developer, a supporter
+  and trying to not to dent the world too much. 
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.mejer-hansen.dk" # the base hostname & protocol for your site
+twitter_username: erikmejerhansen
+github_username:  erikmejerhansen
+
+# Build settings
+markdown: kramdown
