@@ -4,8 +4,7 @@ title:  "How to do support if you don’t value your customers"
 date:   2016-01-27 19:39:48
 categories:
 ---
-*With helpful examples from Oracle and Philips.*
-
+*With helpful examples from Oracle and Philips.*  
 I see customer support as having a polarizing effect: It will either loose you customers or win you fans.
 But winning fans via customer support takes time and effort and will only work if you actually care about your customers.
 
