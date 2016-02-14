@@ -12,6 +12,3 @@ github_username:  erikmejerhansen
 
 # Build settings
 markdown: kramdown
-
-kramdown:
-  syntax_highlighter: rouge
