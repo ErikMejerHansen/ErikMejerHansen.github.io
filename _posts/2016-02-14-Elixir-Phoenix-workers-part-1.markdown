@@ -32,7 +32,7 @@ The bits are:
 I'll be using [Phoenix](http://www.phoenixframework.org/) for building the simple web services used by the clients.
 The server will receive JSON messages that looks like this:
 
-```json
+{% highlight javascript %}
 {
   "client": "Some client",
   "data": {
@@ -40,22 +40,23 @@ The server will receive JSON messages that looks like this:
     "sample": [1,2,3,4]
     }
   }
-```
+{% endhighlight %}
 
 There will be a simple controller for receiving these messages and handing them off to a appropriate worker.
 If the client remembers to set its `content-type` header to `application/json` the JSON will be parsed and be made available to the relevant controller method in its `params` that it receives as its second argument.
 
 Now it makes good sense to map the received JSON into Elixir structs as a way to sanitize received data. In this case the structs looks like this:
-```elixir
+{% highlight elixir %}
 defmodule ExternalSystemMock.Message do
   alias ExternalSystemMock.MessageData, as: MessageData
   defstruct client: "", data: %MessageData{}
 end
 
+
 defmodule ExternalSystemMock.MessageData do
   defstruct sequenceNumber: 0, data: []
 end
-```
+{% endhighlight %}
 
 The newly constructed struct is then sent to workers that will handle forwarding the message to the Agent acting as the third party system.
 
@@ -72,7 +73,7 @@ The Elixir docs state that "Agents are a simple abstraction around state.". So a
 
 Agent is seeded with an empty map as its initial state and usage of the Agent is wrapped in module hiding away the details.
 The full code for the modules is:
-```elixir
+{% highlight elixir %}
 defmodule ExternalSystemMock do
   alias ExternalSystemMock.Message, as: Message
   alias ExternalSystemMock.MessageData, as: MessageData
@@ -112,7 +113,7 @@ defmodule ExternalSystemMock do
     end
   end
 end
-```
+{% endhighlight %}
 
 The real meat is in the `update/3` function. Guard expressions ensure that if any sequence is repeated, skipped or received out of order the Agent raises an exception. Raising an unhanded exception from a Agent will cause it to die.
 This is important because it will make it much easier do detect if any of the worker libraries we look at later on make any changes to the order of the messages.
@@ -124,8 +125,7 @@ We need something to act as a bunch of clients. I had intended to use [Gatling](
 So I turned to [wrk](https://github.com/wg/wrk) instead (and seemed up to the job).
 The small Lua script below sets up a small test. Each client will send fifty messages with increasing sequence numbers and then sends final halt messages (and then the message repeats).
 
-```lua
-
+{% highlight lua %}
 local counter = 1
 local threads = {}
 
@@ -152,8 +152,7 @@ function request()
 
     return table.concat(r)
 end
-
-```
+{% endhighlight %}
 
 Just as a side node: Before adding any workers and running both wrk and Phoenix on the same machine Phoenix seems to top out at around 440000 requests per minute.
 I'll use this as the baseline going forward.
