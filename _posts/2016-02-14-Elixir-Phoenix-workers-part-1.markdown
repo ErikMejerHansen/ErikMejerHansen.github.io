@@ -15,8 +15,9 @@ The idea of this blog series is to first build something to act as the third par
 The next parts of the series will then look at different worker/job-scheduler libraries and see if they can be made to work for this specific use-case.
 
 Before we start looking at the parts we'll need before looking at the first worker there is one point I'd like to stress: *Im just starting out with Elixir and Phoenix*.
-So this is going to be a learning experience for me and you should take everything with a grain of salt[^1].
-[^1]: But if you spot something stupid please let me know.
+So this is going to be a learning experience for me and you should take everything with a grain of salt[^foot].
+
+[^foot]: But if you spot something stupid please let me know.
 
 The necessary parts
 ------------------
