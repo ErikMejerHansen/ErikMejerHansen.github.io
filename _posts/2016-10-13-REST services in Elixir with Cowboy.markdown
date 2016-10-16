@@ -22,7 +22,7 @@ In short:
 
 This makes for a nicely declarative way of describing your resources as you'll hopefully see below. It provides a lot of help (or at least, opinions) in providing correct replies.
 
-You can find the code used in this [blog here](https://github.com/ErikMejerHansen/REST-service-examples) (alongside parallel implementations in `Phoenix` and `Webmachine`).
+You can find the code used in this blog [here](https://github.com/ErikMejerHansen/REST-service-examples) (alongside parallel implementations in `Phoenix` and `Webmachine`).
 
 ## The first resource
 Lets start by creating a new Elixir project using the `--sup` flag to get a supervisor for our project:
