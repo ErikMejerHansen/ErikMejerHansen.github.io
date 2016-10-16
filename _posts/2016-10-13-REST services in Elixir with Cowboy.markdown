@@ -4,7 +4,9 @@ title:  "REST services in Elixir with Cowboy"
 date:   2016-10-16 14:00:00
 categories:
 ---
-cowboy_rest, inspired by [webmachine](https://github.com/webmachine/webmachine)[^webmachine], makes it easy to write REST services in Elixir. In this blog I'll give a quick example of how to create a couple of simple resources and lastly touch on a few of the downsides of using it.
+`cowboy_rest` makes it easy to write REST.
+
+It is inspired by [webmachine](https://github.com/webmachine/webmachine)[^webmachine],  services in Elixir. In this blog I'll give a quick example of how to create a couple of simple resources and lastly touch on a few of the downsides of using it.
 
 [^webmachine]: I highly recommend reading the blog series by Sean Cribbs on webmachine found [here](http://seancribbs.com/) if you're unfamiliar with `webmachine`)
 
