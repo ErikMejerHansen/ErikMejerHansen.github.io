@@ -2,7 +2,7 @@
 layout: post
 title:  "Unexpected message"
 date:   2016-10-24 20:00:00
-categories: Elixir, TIL
+categories:
 ---
 Do you know on which process the `start_link` function of a `GenServer` in Elixir is run?   
 `GenServer` is one of the central building blocks often turned to when building something in Elixir but the above question is not something I had ever really given any thought.
