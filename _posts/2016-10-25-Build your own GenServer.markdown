@@ -216,4 +216,4 @@ Then it waits for the response message with `receive`.
 
 The `:pop` message is handled we take the first element, send it to the calling process and then recursively call the `receiver/1` function with the popped stack.
 
-And there we have the synchronous call we wanted. You can find the complete code here if you want to play around with it.
+And there we have the synchronous call we wanted. You can find the [completed code here](https://github.com/ErikMejerHansen/SimpleStack) if you want to play around with it.
