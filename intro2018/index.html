@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lær at programmere, Mandag 5. februar 12 2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./js/styles/solarized-light.css" />
+
+    <script src="./js/highlight.pack.js"></script>
+    <script>
+        console.log("Init highlight");
+        hljs.initHighlightingOnLoad();
+    </script>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+
+</head>
+
+<body>
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1 class="cursive" style="background: black">Velkommen til</h1>
+                    <h2>Lær at programmere</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h2>Erik Mejer Hansen <small> - Gift og far til 3</small></h2>
+                    <h2>Software udvikler<small> - Cand.scient. i Datalogi</small></h2>
+                    <h2>Frivillig i Coding Pirates<small> - Programmering og kreativ IT for 7-17 årige</small></h2>
+
+                    <hr/>
+
+                    <i class="icon ion-social-twitter"> @erikmejerhansen</i></br>
+
+                    <i class="icon ion-android-mail"> erik.mejer.hansen@gmail.com</i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>
+                        <i class="icon ion-alert" style="margin: 0.5em;"></i>
+                        <i class="icon ion-merge" style="margin: 0.5em;"></i>
+                        <i class="icon ion-ios-loop-strong" style="margin: 0.5em;"></i>
+                        <i class="icon ion-log-in" style="margin: 0.5em;"></i>
+                    </h1>
+                </div>
+                <div class="row no-gutter">
+                    <h3> Udtryk - Valg - Gentagelser - Funktioner</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div style="width: 20%; float: left">
+
+                    <img src="assets/ruby.png" class="img-responsive" alt="Image 1">
+
+                </div>
+
+                <div style="width: 60%; text-align:end;">
+                    <h1>ruby-lang.org</h1>
+                    <h3>
+                        <li>Nemt at komme i gang med</li>
+                    </h3>
+                    <h3>
+                        <li>Masser af hjælp at finde</li>
+                    </h3>
+                    <h3>
+                        <li>Masser af færdigbyggede komponenter at finde</li>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+
+                <div class="row no-gutter" style="margin-bottom: 3em;">
+                    <h1> Dansk eller <code>Engelsk</code></h1>
+                </div>
+
+                <div class="row no-gutter">
+                    <blockquote>
+                        danglish: form for dansk der er stærkt præget af engelske ord og engelsk udtale
+                    </blockquote>
+                    <cite>- Den Danske Ordbog</cite>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1 style="margin-bottom:10px">Udtryk<small> - et helt program, en linje ad gangen</small></h1>
+                </div>
+                <div class="row no-gutter">
+                    <i class="icon ion-alert" style="font-size: 15em;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>
+                        Tal
+                    </h1>
+                </div>
+                <br/>
+                <div class="row no-gutter">
+                    <pre><code class ="ruby">
+1         # Tal
+2.3       # Et andet tal
+2 + 3     # Addition
+3 - 1     # Subtraktion
+2 * 3     # Multiplikation
+3 / 2     # Division
+3 % 2     # Modulo
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>
+                        Sandt/falsk <small>og sammenligninger</small>
+                    </h1>
+                </div>
+                <br/>
+                <div class="row no-gutter">
+                    <pre><code class ="ruby">
+true      # Tal
+false     # Et andet tal
+
+2 > 3     # Større end sammenligning
+3 < 1     # Mindre end sammenligning
+2 == 3    # Lighed
+
+!         # Negation
+not       # Negation
+
+&&        # Logisk "og"
+||        # Logisk "eller"
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1 class="cursive" style="background: black">De første eksperimenter</h1>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>
+                        Hello, world!
+                    </h1>
+                    <br/>
+
+                    <h1> <i class="icon ion-android-compass"></i> http://joshnuss.github.io/mruby-web-irb/ </h1>
+                </div>
+                <br/>
+                <div class="row no-gutter">
+                    <pre><code class ="ruby">
+puts "Hello, world!"
+                    </code></pre>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Opgaver</h1>
+
+                    <ul style="font-size: 30px">
+                        <li style="margin-bottom: 20px">Afprøv de forskellige regnearter: <code>+</code> <code>-</code> <code>/</code> <code>*</code> og <code>%</code> </li>
+                        <li style="margin-bottom: 20px">Prøv at sammensætte mere komplekse regnestykker med <code>(</code> , <code>)</code></li>
+                        <li style="margin-bottom: 20px">Kan I gennemskue hvad <code>%</code> gør?</li>
+                        <li style="margin-bottom: 20px">Afprøv sammenligningerne: <code>></code> <code><</code> <code><=</code> <code>>=</code> <code>==</code> <code>!=</code></li>
+                        <li style="margin-bottom: 20px">Virker sammenligningerne på andet end tal? </li>
+                        <li style="margin-bottom: 20px">Hvad er resultatet af <code> true && false</code>?</li>
+                        <li style="margin-bottom: 20px">Hvad er resultatet af <code> true && true</code>?</li>
+                        <li style="margin-bottom: 20px">Hvad er resultatet af <code> true || false</code>?</li>
+                        <li style="margin-bottom: 20px">Hvad er resultatet af <code> false || false</code>?</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1 style="margin-bottom:10px">If sætninger<small> - At kunne fortage valg</small></h1>
+                </div>
+                <div class="row no-gutter">
+                    <i class="icon ion-merge" style="font-size: 15em;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Hvis - Så - ellers</h1>
+                    <pre><code class ="ruby">
+if true then
+   puts "Jeg bliver vist"
+end
+
+if false then
+   puts "Jeg bliver ikke vist"
+else
+   puts "Men det gør jeg"
+end
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Hvis - Så - ellers</h1>
+                    <pre><code class ="ruby">
+if true then
+   puts "Jeg bliver vist"
+end
+
+if false then
+   puts "Jeg bliver ikke vist"
+else
+   puts "Men det gør jeg"
+end
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <div style="float:left; width:40%">
+                        <img src="assets/boole.png" class="img-responsive">
+                    </div>
+                    <div style="float:right; width: 60%">
+                        <h1>Gerorge Boole <small> 1815 - 1864</small></h1>
+                        <hr/>
+                        <h3>Engelsk filosof, matematiker og <u>logiker</u></h3>
+                        <h3>Opfinder af boolsk algebra</h3>
+                    </div>
+
+                </div>
+            </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Boolske udtryk</h1>
+                    <h2> Ting der evaluerer til sandt eller falsk</h2>
+                    <hr/>
+                    <h3>Samenligninger</h3>
+                    <pre><code class ="ruby"> 10 <= 8   x == 8   sted = "Horsens"   alder >= 18</code></pre>
+                    <hr/>
+                    <h3>Logiske udtryk</h3>
+                    <pre><code class ="ruby">(10 <= x) && (x <= 20)
+
+placering == "1. etage" || placering == "2. etage"
+
+x % 2 != 0</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Ordenssans for begyndende programmører</h1>
+                    <hr/>
+                    <h2>#1: Brug flere linjer</h2>
+                    <pre><code>if x > 8 then 12 end</code></pre>
+                </div>
+                <div class="row no-gutter" style="margin-top: 3em; margin-bottom: 3em;">
+                    <img src="assets/ShiftKey.svg" style="display: inline-block; vertical-align: top; height: 5.5em;" class="img-responsive" />
+                    <p style="display: inline-block; font-size: 5em; vertical-align: top; color: white; margin-left: 0.5em; margin-right:0.5em;"> + </p>
+                    <img src="assets/EnterKey.svg" style="display: inline-block; vertical-align: top; height: 12em;" class="img-responsive" />
+                </div>
+                <div class="row no-gutter">
+                    <pre><code>if x > 8 then
+12
+end</code></pre>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Ordenssans for begyndende programmører</h1>
+                    <hr/>
+                    <h2>#2: Brug indrykning</h2>
+                    <div class="row no-gutter">
+                        <pre><code>if x > 8 then
+12
+else
+20
+end</code></pre>
+                    </div>
+                </div>
+                <div class="row no-gutter" style="margin-top: 3em;">
+                    <p style="display: inline-block; font-size: 4em; vertical-align: top; color: white">3 * </p>
+                    <img src="assets/SpaceKey.svg" style="display: inline-block; height: 5.5em;" class="img-responsive" />
+                </div>
+                <div class="row no-gutter">
+                    <pre><code>if x > 8 then
+   12
+else
+   20
+end</code></pre>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Variable</h1>
+                    <pre><code>
+x = 3
+
+if x > 0 then
+   puts "x er mere end tre"
+   x = 0
+end
+
+puts "x er nu #{x}"
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Opgaver</h1>
+                </div>
+
+                <div class="row no-gutter" style="margin-top: 3em; margin-bottom:3em;">
+                    <pre><code>if (Boolsk udtryk) then
+
+else if (boolsk udtryk)
+
+end</code></pre>
+
+                    <ul style="font-size: 30px">
+                        <li style="margin-bottom: 20px">Lav en variabel x og giv den en tal-værdi. Lav derefter en if-sætning der skriver ud on x er positivt, negativt eller nul. <br/> Husk at du bruger <code>puts</code> til at få skrevet noget på skærmen med. </li>
+                        <li style="margin-bottom: 20px">Hvad er resultatet af: <code> (true && false) || (false || true)</code></li>
+                        <li style="margin-bottom: 20px">Hvad er resultatet af:
+                            <pre><code>x = 23
+if x % 2 == 0 then
+   puts "A"
+else
+   puts "B"
+end</code></pre>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1 style="margin-bottom:10px">Iteration<small> - gentagelser, gentagelser, gentagelser, ... </small></h1>
+                </div>
+                <div class="row no-gutter">
+                    <i class="icon ion-ios-loop-strong" style="font-size: 15em;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>for loop</h1>
+                    <pre style="margin-top: 3em;"><code>for i in 1..10
+  puts "#{i}"
+end</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Arrays <small> lister af ting</small></h1>
+                    <pre style="margin-top: 3em;"><code>a = [1, 2, 3, 4, 5, 6, 7, "foo", "bar"]
+for i in a
+  puts "#{i}"
+end</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>While loops <small> Kør indtil jeg siger til</small></h1>
+                    <pre style="margin-top: 3em;"><code>x = 0
+while x < 10
+   puts x
+   x = x + 1
+end</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Opgaver</h1>
+                </div>
+
+                <div class="row no-gutter" style="margin-top: 3em; margin-bottom:3em;">
+                    <pre><code>for i in 1..10
+#
+end
+
+a = [1, 2, 3, 4, 5, 6, 7, "foo", "bar"]
+for i in a
+#
+end
+
+x = 0
+while x < 10
+#
+end
+
+</code></pre>
+
+                    <ul style="font-size: 30px">
+                        <li>Lav en <code>while</code> løkke er tæller ned fra 10</li>
+                        <li>Lav en <code>for</code> løkke er tæller ned fra 10 ved hjælp af et array</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1 style="margin-bottom:10px">Funktioner<small> - kode til genbrug</small></h1>
+                </div>
+                <div class="row no-gutter">
+                    <i class="icon ion-log-in" style="font-size: 15em;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Vores første funktion <small> - sig hej</small></h1>
+                    <pre style="margin-top: 3em;"><code>def sig_hej(navn)
+   return "Hej, #{navn}"
+end
+
+sig_hej("Erik")</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Vores første funktion <small> - Sig pænt goddag </small></h1>
+                    <pre style="margin-top: 3em;"><code>def sig_goddag(navn, titel)
+   return "Goddag, #{titel} #{navn}"
+end
+
+sig_goddag("Erik", "Hr.")</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Funktion til at udregne fakultet <small> - Aftenenes svendestykke</small></h1>
+                    <hr/>
+                    <h2> 0! = 1</h2>
+                    <h2> 1! = 1</h2>
+                    <h2> 2! = 1 * 2</h2>
+                    <h2> 3! = 1 * 2 * 3</h2>
+                    <h2> 4! = 1 * 2 * 3 * 4</h2>
+                    <h2> 5! = 1 * 2 * 3 * 4 * 5</h2>
+                    <h2> 6! = 1 * 2 * 3 * 4 * 5 * 6</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <pre style="margin-top: 3em;"><code>
+def fakultet(n)
+end
+
+puts "0! = #{fakultet(0)}"
+puts "1! = #{fakultet(1)}"
+puts "2! = #{fakultet(2)}"
+puts "3! = #{fakultet(3)}"
+puts "4! = #{fakultet(4)}"
+</code></pre>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <pre style="margin-top: 3em;"><code>
+def fakultet(n)
+   for i in 1..n
+      puts i
+   end
+end
+
+puts "6! = #{fakultet(6)}"
+</code></pre>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <pre style="margin-top: 3em;"><code>
+def fakultet(n)
+   sum = 1
+   for i in 1..n
+      sum *= i
+   end
+   return sum
+end
+
+puts "0! = #{fakultet(0)}"
+puts "1! = #{fakultet(1)}"
+puts "2! = #{fakultet(2)}"
+puts "3! = #{fakultet(3)}"
+puts "4! = #{fakultet(4)}"
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Færdig?</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <blockquote>Opfattet som en funktion er fakultet kun defineret for <u style="font-size:xx-large;">ikkenegative</u> hele tal</blockquote>
+                    <cite>https://da.wikipedia.org/wiki/Fakultet_(matematik)</cite>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Hvordan klarer vi den?</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <pre style="margin-top: 3em;"><code>
+def fakultet(n)
+   if(n < 0) then
+      return "Ikke defineret"
+   end
+
+   sum = 1
+   for i in 1..n
+      sum *= i
+   end
+   return sum
+end
+
+puts "-10! = #{fakultet(-10)}"
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header style="background-image:none; background: #042b34">
+        <div class="header-content">
+            <div class="inner">
+                <div class="row no-gutter">
+                    <h1>Hvordan kommer jeg videre?</h1>
+                    <h2>https://poignant.guide/ <small> - en noget utraditionel bog</small></h2>
+                    <h2>http://rubykoans.com/<small> - Små programmeringsopgver i Ruby</small></h2>
+                    <h2>https://www.codeschool.com/<small> - Interaktive kurser (koster penge)</small></h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>
