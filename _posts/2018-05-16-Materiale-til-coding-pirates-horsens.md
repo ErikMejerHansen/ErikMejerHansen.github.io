@@ -34,3 +34,4 @@ Der er skiftet til GameMaker. Bogen er smidt ud til fordel for små YouTube vide
 [![ I gang med GameMaker: Episode #2 ](/assets/gm_2.png)](https://www.youtube.com/watch?v=4QprKktDT2M)
 [![ I gang med GameMaker: Episode #3 ](/assets/gm_3.png)](https://www.youtube.com/watch?v=3A1LVO1yWCo)
 [![ I gang med GameMaker: Episode #4 ](/assets/gm_4.png)](https://www.youtube.com/watch?v=XmmM4mX68ps)
+[![ I gang med GameMaker: Episode #5 ](/assets/gm_5.png)](https://www.youtube.com/watch?v=fWYFhfZRyuE)
