@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Are we pair programming too much?"
-date: 2020-08-08 21:00:00
+date: 2021-08-08 21:00:00
 categories:
 ---
 
