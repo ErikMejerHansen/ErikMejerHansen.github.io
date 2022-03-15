@@ -120,7 +120,7 @@ Social loafing increases with group size. The bigger the group the larger the ef
 
 ## Closing thoughts
 
-The next time someone ask me about the reasonability of doing pair programming I think I'll change may answer from "It's at least twice as fast" to:
+The next time someone asks me about the reasonability of doing pair programming I think I'll change may answer from "It's at least twice as fast" to:
 
 _"I believe that pair programming is a worthwhile investment in knowledge sharing, team building and learning - but for some tasks will be an investment"_.
 
